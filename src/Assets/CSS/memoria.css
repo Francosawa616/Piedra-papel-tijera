@@ -1,0 +1,94 @@
+/* Estilo para el contenedor del juego */
+#game {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo para las filas del tablero */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Estilo para las columnas del tablero */
+.col {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Estilo para las tarjetas */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  height: 0;
+  padding-bottom: 150%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para las caras de las tarjetas */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Estilo para las imágenes de las caras de las tarjetas */
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Estilo para las tarjetas volteadas */
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Estilo para las tarjetas que hacen juego */
+.matched {
+  visibility: hidden;
+}
+
+/* Estilo para el mensaje de ganar */
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.alert-message {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../Font/PressStart2P.ttf') format('truetype');
+}
+
+:root {
+	--primary-color: #f16624;
+	--secondary-color: #e6e6e6;
+	--background-color: #222;
+	--text-color: #fff;
+	--font-family: 'Press Start 2P', cursive;
+  }
+  
+  body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+	font-family: var(--font-family);
+	font-size: 14px;
+	color: var(--text-color);
+  }
+  
+  h1 {
+	text-align: center;
+	font-size: 24px;
+  }
+  
+  .container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  #game-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  #word-area {
+	font-size: 30px;
+	text-align: center;
+	margin: 80px;
+	height: 130px;
+	width: 80%;
+	border: 5px solid #ffffff;
+	border-radius: 10px;
+	background-color: #5a5a5a;
+	color: #ffffff;
+	padding-top: 25px;
+	box-sizing: border-box;
+  }
+  
+  #hangman-area {
+	height: 180px;
+	margin-bottom: 10px;
+	background-image: url('https://cdn.pixabay.com/photo/2016/12/09/16/54/hangman-1899525_960_720.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+  }
+  
+  #letter-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .letter {
+	margin: 8px;
+	padding: 16px;
+	border-radius: 50%;
+	border: 5px solid var(--secondary-color);
+	text-align: center;
+	line-height: 60px;
+	font-size: 26px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--primary-color);
+  }
+  
+  .letter:hover:not(.disabled) {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+  }
+  
+  .letter.disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+  }
+  
+  #result-area {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+  }
+  
+  #result-message {
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+	color: var(--text-color);
+	font-weight: bold;
+  }
+  
+  #result-message.correct {
+	color: var(--primary-color);
+  }
+  
+  #result-message.incorrect {
+	color: var(--secondary-color);
+  }
+  
+  #restart-button {
+	display: block;
+	margin-top: 20px;
+	padding: 16px 24px;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: var(--font-family);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+  }
+  
+  #restart-button:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+  }
+  

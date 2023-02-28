@@ -1,0 +1,43 @@
+body {
+	background-color: #1f1f1f;
+	color: #f1f1f1;
+	font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 50px;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+td {
+	border: 5px solid #f1f1f1;
+	height: 150px;
+	width: 150px;
+	text-align: center;
+	font-size: 100px;
+	cursor: pointer;
+	background-color: #1f1f1f;
+}
+
+button {
+	display: block;
+	margin: 50px auto;
+	padding: 20px 50px;
+	font-size: 30px;
+	cursor: pointer;
+	background-color: #f1f1f1;
+	color: #1f1f1f;
+	border: none;
+	border-radius: 10px;
+}
+
+button:hover {
+	background-color: #a30000;
+	color: #f1f1f1;
+}
