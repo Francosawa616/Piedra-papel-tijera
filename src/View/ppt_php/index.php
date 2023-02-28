@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../Assets/CSS/ppt_php.css">
 </head>
 <body>
+<a href="../gamesphp.php" class="back-link">Volver</a>
     <h1>Piedra, papel o tijera</h1>
     <form method="POST">
         <div class="options">

@@ -12,6 +12,7 @@ const palabras = [
   { palabra: 'RUBY', descripcion: 'Lenguaje de programación utilizado para el desarrollo de aplicaciones web y móviles.' }
 ];
 
+
 // Selecciona una palabra aleatoria de la lista
 let palabra = palabras[Math.floor(Math.random() * palabras.length)];
 
@@ -57,7 +58,7 @@ function mostrarLetras() {
     letraBtn.innerHTML = letra;
     letraBtn.addEventListener('click', function() {
       if (letrasAdivinadas.indexOf(letra) === -1 && letrasIncorrectas.indexOf(letra) === -1) {
-        const letraCorrecta = palabra.palabra.indexOf(letra) !== -1;
+        const letraCorrecta = palabra.indexOf(letra) !== -1;
         if (letraCorrecta) {
           letrasAdivinadas.push(letra);
           mostrarPalabra();
@@ -66,22 +67,90 @@ function mostrarLetras() {
             setTimeout(function() {
               reiniciarJuego();
             }, 3000);
-            }
-            } else {
-            letrasIncorrectas.push(letra);
-            intentos--;
-            actualizarIntentos();
-            actualizarImagen();
-            if (intentos === 0) {
-              resultArea.innerHTML = `¡Has perdido! La palabra era "${palabra.palabra}".`;
-            setTimeout(function() {
+          }
+        } else {
+          letrasIncorrectas.push(letra);
+          intentos++;
+          actualizarImagenAhorcado();
+          if (intentos === maxIntentos) {
+            resultArea.innerHTML = '¡Lo siento, has perdido! La palabra era: ' + palabra;
+            desactivarLetras();
             reiniciarJuego();
-            }, 3000);
-            }
-            }
-            actualizarLetras();
-            }
-            });
-            letrasArea.appendChild(letraBtn);
-            }
-            }
+          }
+        }
+        actualizarLetras();
+      }
+    });
+    letterArea.appendChild(letraBtn);
+  }
+}
+
+
+// Función para actualizar las letras disponibles en el DOM
+function actualizarLetras() {
+  const letras = letterArea.querySelectorAll('.letter');
+  for (let i = 0; i < letras.length; i++) {
+    const letra = letras[i].innerHTML;
+    if (letrasAdivinadas.indexOf(letra) !== -1 || letrasIncorrectas.indexOf(letra) !== -1) {
+      letras[i].classList.add('disabled');
+    } else {
+      letras[i].classList.remove('disabled');
+    }
+  }
+}
+
+// Función para actualizar la imagen del ahorcado en el DOM
+function actualizarImagenAhorcado() {
+  hangmanArea.style.backgroundImage = 'url(\'hangman' + intentos + '.png\')';
+}
+
+// Función para desactivar las letras disponibles en el DOM
+function desactivarLetras() {
+  const letras = letterArea.querySelectorAll('.letter');
+  for (let i = 0; i < letras.length; i++) {
+  letras[i].classList.add('disabled');
+  }
+  }
+  
+  // Función para verificar si se ha completado la palabra
+  function palabraCompleta() {
+  for (let i = 0; i < palabra.length; i++) {
+  if (letrasAdivinadas.indexOf(palabra[i]) === -1) {
+  return false;
+  }
+  }
+  return true;
+  }
+  
+  // Función para obtener una nueva palabra y reiniciar el juego
+  function nuevaPalabra() {
+  // Selecciona una nueva palabra aleatoria de la lista
+  palabra = palabras[Math.floor(Math.random() * palabras.length)];
+  // Reinicia los arreglos de letras adivinadas y letras incorrectas
+letrasAdivinadas.length = 0;
+letrasIncorrectas.length = 0;
+
+// Reinicia el contador de intentos
+intentos = 0;
+
+// Actualiza la imagen del ahorcado
+actualizarImagenAhorcado();
+
+// Muestra la nueva palabra a adivinar y las letras disponibles
+mostrarPalabra();
+actualizarLetras();
+
+// Limpia el resultado anterior
+resultArea.innerHTML = '';
+}
+
+// Mostrar la palabra y las letras disponibles en el DOM
+mostrarPalabra();
+mostrarLetras();
+
+// Función para reiniciar el juego
+function reiniciarJuego() {
+  setTimeout(function() {
+    nuevaPalabra();
+  }, 3000); // Espera 3 segundos antes de obtener una nueva palabra
+}

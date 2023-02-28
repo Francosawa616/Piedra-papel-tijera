@@ -8,6 +8,7 @@ session_start();
     <link rel="stylesheet" href="../../Assets/CSS/palabras.css">
 </head>
 <body>
+<a href="../gamesphp.php" class="back-link">Volver</a>
 	<h1>Juego de adivinanza</h1>
 	<?php require 'adivinanza.php'; ?>
 	<form method="post" action="">

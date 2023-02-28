@@ -46,3 +46,20 @@ p#mensaje {
 	background-color: #f5f5f5;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 }
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .back-link:hover {
+    background-color: #ddd;
+  }
+  

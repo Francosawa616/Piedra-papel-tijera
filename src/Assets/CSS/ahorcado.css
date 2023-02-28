@@ -134,4 +134,20 @@
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
   }
+  .back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .back-link:hover {
+    background-color: #ddd;
+  }
   
