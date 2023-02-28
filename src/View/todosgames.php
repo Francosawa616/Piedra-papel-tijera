@@ -11,7 +11,7 @@
         <li><a href="../View/index.php">Inicio</a></li>
       </ul>
     </nav>
-    <h1>Juegos con PHP</h1>
+    <h1>Todos los juegos</h1>
     <ul class="ulcatalogo">
       <li class="licatalogo">
         <a href="../View/tateti/index.php" class="catalogo">
@@ -29,6 +29,26 @@
         <a href="../View/palabras/index.php" class="catalogo">
           <img src="../Assets/img/adivinanza.png" alt="Juego 3">
           <span>Adivinanzas</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="ulcatalogo">
+      <li class="licatalogo">
+        <a href="../View/piedra-papel-tijera/index.php" class="catalogo">
+          <img src="../Assets/img/ppt.png">
+          <span>P.P.T</span>
+        </a>
+      </li>
+      <li class="licatalogo">
+        <a href="../View/simon/index.php" class="catalogo">
+          <img src="../Assets/img/simon.jpg" alt="Juego 2">
+          <span>SIMON DICE</span>
+        </a>
+      </li>
+      <li  class="licatalogo">
+        <a href="../View/ahorcado/index.php" class="catalogo">
+          <img src="../Assets/img/ahorcado.png" alt="Juego 3">
+          <span>ahorcado</span>
         </a>
       </li>
     </ul>

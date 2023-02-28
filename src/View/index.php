@@ -12,8 +12,7 @@
 		<nav>
 			<ul>
 				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Todos_los_Juegos</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="todosgames.php">Todos_los_Juegos</a></li>
 			</ul>
 		</nav>
 	</header>

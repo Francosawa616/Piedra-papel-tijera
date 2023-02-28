@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../../Assets/CSS/simon.css">
   </head>
   <body>
-  <a href="../gamesphp.php" class="back-link">Volver</a>
+  <a href="../gamesphpandjs.php" class="back-link">Volver</a>
     <h1>Simon Game</h1>
 
     <div id="game-over-message">Game Over</div>

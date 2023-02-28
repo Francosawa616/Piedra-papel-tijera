@@ -1,13 +1,13 @@
 <?php
 session_start();
-require '../tateti/ta-te-ti.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Ta-Te-Ti</title>
-	<link rel="stylesheet" type="text/css" href="../../Assets/CSS/ta-te-ti.css">
+	<link rel="stylesheet" type="text/css" href="ta-te-ti.css">
 </head>
+<?php require 'ta-te-ti.php'; ?>
 <body>
 <a href="../gamesphp.php" class="back-link">Volver</a>
 	<h1>Ta-Te-Ti</h1>

@@ -6,7 +6,7 @@
 	<script src="../../Assets/JS/ppt.js"></script>
 </head>
 <body>
-<a href="../gamesphp.php" class="back-link">Volver</a>
+<a href="../gamesphpandjs.php" class="back-link">Volver</a>
 	<header>
 		<h1>Juego de Piedra, Papel o Tijera</h1>
 	</header>
